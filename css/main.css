@@ -1,3 +1,9 @@
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Balsamiq Sans", cursive;
   color: #307849;
@@ -11,6 +17,7 @@ body {
 
 .header {
   background: #e0ebe7 url("../img/background.png") no-repeat center top;
+  background-size: cover;
   padding-top: 23px;
 }
 
@@ -53,7 +60,7 @@ a {
 
   background-color: #307849;
   opacity: 0;
-  transition: opacity 0.5s ease;
+  transition: opacity 0.2s ease;
 }
 
 .menu__item a {
@@ -62,9 +69,8 @@ a {
   font-size: 18px;
   text-transform: uppercase;
 }
-.menu__item a:hover {
+.menu__item:hover.menu__item:after {
   opacity: 1;
-  border-bottom: 2px solid #307849;
 }
 
 .offer__title {
@@ -284,23 +290,13 @@ a {
 
 .form__input {
   display: flex;
-  width: 500px;
-  height: 36px;
   align-items: center;
-}
-
-.form__input__text {
-  width: 710px;
-  height: 350px;
-  border: 1px solid #307849;
-  box-sizing: border-box;
-  border-radius: 75px;
 }
 
 .form {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .form__input i {
@@ -312,6 +308,10 @@ a {
   border: none;
   outline: none;
   font-size: 24px;
+  border: 1px solid #307849;
+  border-radius: 75px;
+  padding: 15px;
+  margin-bottom: 5px;
 }
 
 .form__input__text textarea {
@@ -326,10 +326,30 @@ a {
 
 .form_textarea {
   display: block;
+  width: 710px;
+  height: 350px;
+  border: 1px solid #307849;
+  box-sizing: border-box;
+  border-radius: 75px;
+  padding: 50px;
+  resize: none;
+  outline: 0;
 }
 
-.form_input span {
+.form_textarea:focus {
+  border: 1px solid #edce37;
+}
+
+.form__input span {
   display: block;
+  margin-right: 25px;
+  width: 24px;
+  height: 24px;
+}
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .form_btn {
@@ -341,6 +361,8 @@ a {
   width: 250px;
   height: 60px;
   background-color: #fff;
+  cursor: pointer;
+  outline: none;
 }
 
 .form__hr {
@@ -348,7 +370,7 @@ a {
   height: 2px;
   width: 357px;
   left: 542px;
-  margin-top: 135px;
+  margin-top: 40px;
   border: 0;
 }
 
@@ -357,6 +379,7 @@ a {
   justify-content: center;
   margin-top: 30px;
   background: #e0ebe7 url("../img/background.png") no-repeat center top;
+  background-size: cover;
 }
 
 .menu__item__footer {
@@ -387,9 +410,8 @@ a {
   font-size: 36px;
   text-transform: uppercase;
 }
-.menu__item__footer a:hover {
+.menu__item__footer:hover.menu__item__footer:after {
   opacity: 1;
-  border-bottom: 2px solid #307849;
 }
 
 .footer__text {
